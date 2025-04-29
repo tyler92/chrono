@@ -11,6 +11,7 @@ cargo-fuzz = true
 
 [dependencies]
 libfuzzer-sys = "0.4"
+arbitrary = { version = "1.0.0", features = ["derive"] }
 
 [dependencies.chrono]
 path = ".."
@@ -22,3 +23,7 @@ members = ["."]
 [[bin]]
 name = "fuzz_reader"
 path = "fuzz_targets/fuzz_reader.rs"
+
+[[bin]]
+name = "fuzz_format"
+path = "fuzz_targets/fuzz_format.rs"
